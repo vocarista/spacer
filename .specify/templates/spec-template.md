@@ -84,11 +84,19 @@
 
 ### Functional Requirements
 
-- **FR-001**: System MUST [specific capability, e.g., "allow users to create accounts"]
-- **FR-002**: System MUST [specific capability, e.g., "validate email addresses"]  
-- **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
-- **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
-- **FR-005**: System MUST [behavior, e.g., "log all security events"]
+**Constitution Compliance Requirements**:
+- **FR-001**: System MUST use simplest viable approach for each feature
+- **FR-002**: System MUST run in minimal Docker container without external dependencies
+- **FR-003**: System MUST limit imports to absolute requirements only
+- **FR-004**: System MUST implement security by design (input validation, auth, authorization)
+- **FR-005**: System MUST include descriptive comments for all files and functions
+
+**Feature-Specific Requirements**:
+- **FR-006**: System MUST [specific capability, e.g., "allow users to create accounts"]
+- **FR-007**: System MUST [specific capability, e.g., "validate email addresses"]  
+- **FR-008**: Users MUST be able to [key interaction, e.g., "reset their password"]
+- **FR-009**: System MUST [data requirement, e.g., "persist user preferences"]
+- **FR-010**: System MUST [behavior, e.g., "log all security events"]
 
 *Example of marking unclear requirements:*
 
