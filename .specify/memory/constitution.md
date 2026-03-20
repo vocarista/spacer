@@ -1,50 +1,42 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# Spacer Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Simplicity First
+Solutions MUST prioritize simplicity over complexity. Start with the most straightforward approach that meets requirements. Apply YAGNI (You Aren't Gonna Need It) principles rigorously. Any complexity beyond the minimal viable solution MUST be explicitly justified in design documents.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Minimal Infrastructure
+All components MUST run in minimal Docker containers without external dependencies. No performance bottlenecks acceptable. Resource usage MUST be optimized for containerized deployment. Infrastructure complexity MUST be justified with measurable performance benefits.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Essential Imports Only
+Module imports MUST be limited to absolute requirements. Each import MUST serve a critical function that cannot be achieved otherwise. Import analysis MUST be part of code review. Duplicate or redundant imports MUST be eliminated.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Security by Design
+Security MUST be considered at every layer. Input validation MUST be comprehensive. Error messages MUST not leak sensitive information. All external interactions MUST be authenticated and authorized. Security reviews MUST precede deployment.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Documentation for Maintainability
+Every file MUST have descriptive comments explaining purpose and key design decisions. Every function MUST document inputs, outputs, and behavior. Complex operations MUST have one-line comments explaining the logic. Code MUST be self-documenting where possible, with comments clarifying intent rather than implementation.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Development Standards
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### Code Quality
+All code MUST pass automated linting and formatting. Complex logic MUST be broken into smaller, testable functions. Cyclomatic complexity MUST stay below 10. Code reviews MUST verify compliance with all constitutional principles.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### Testing Strategy
+Unit tests MUST cover all critical paths. Integration tests MUST verify component interactions. Security tests MUST validate input sanitization and access controls. Performance tests MUST confirm no bottlenecks under expected load.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all other development practices. Amendments require documentation, team approval, and migration plan. All pull requests MUST verify constitutional compliance. Complexity MUST be justified in design reviews. Use this constitution as the primary guidance for all development decisions.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-03-15 | **Last Amended**: 2025-03-15
+
+<!--
+Sync Impact Report:
+Version change: None (initial constitution)
+Modified principles: N/A (initial creation)
+Added sections: All sections
+Removed sections: N/A
+Templates requiring updates: ✅ plan-template.md (Constitution Check section), ✅ spec-template.md (requirements alignment), ✅ tasks-template.md (task categorization)
+Follow-up TODOs: None
+-->

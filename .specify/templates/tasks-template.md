@@ -49,8 +49,10 @@ description: "Task list template for feature implementation"
 **Purpose**: Project initialization and basic structure
 
 - [ ] T001 Create project structure per implementation plan
-- [ ] T002 Initialize [language] project with [framework] dependencies
+- [ ] T002 Initialize [language] project with [framework] dependencies (MUST justify each dependency)
 - [ ] T003 [P] Configure linting and formatting tools
+- [ ] T004 [P] Setup Docker containerization (MUST be minimal, no external dependencies)
+- [ ] T005 [P] Configure security scanning and validation tools
 
 ---
 
@@ -62,12 +64,12 @@ description: "Task list template for feature implementation"
 
 Examples of foundational tasks (adjust based on your project):
 
-- [ ] T004 Setup database schema and migrations framework
-- [ ] T005 [P] Implement authentication/authorization framework
-- [ ] T006 [P] Setup API routing and middleware structure
-- [ ] T007 Create base models/entities that all stories depend on
-- [ ] T008 Configure error handling and logging infrastructure
-- [ ] T009 Setup environment configuration management
+- [ ] T006 Setup database schema and migrations framework (MUST justify complexity vs simple file storage)
+- [ ] T007 [P] Implement authentication/authorization framework (Security by Design requirement)
+- [ ] T008 [P] Setup API routing and middleware structure (MUST be minimal)
+- [ ] T009 Create base models/entities that all stories depend on (MUST document design decisions)
+- [ ] T010 Configure error handling and logging infrastructure (MUST not leak sensitive info)
+- [ ] T011 Setup environment configuration management (MUST be simple and secure)
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -88,12 +90,14 @@ Examples of foundational tasks (adjust based on your project):
 
 ### Implementation for User Story 1
 
-- [ ] T012 [P] [US1] Create [Entity1] model in src/models/[entity1].py
-- [ ] T013 [P] [US1] Create [Entity2] model in src/models/[entity2].py
-- [ ] T014 [US1] Implement [Service] in src/services/[service].py (depends on T012, T013)
-- [ ] T015 [US1] Implement [endpoint/feature] in src/[location]/[file].py
-- [ ] T016 [US1] Add validation and error handling
-- [ ] T017 [US1] Add logging for user story 1 operations
+- [ ] T012 [P] [US1] Create [Entity1] model in src/models/[entity1].py (MUST include descriptive comments)
+- [ ] T013 [P] [US1] Create [Entity2] model in src/models/[entity2].py (MUST include descriptive comments)
+- [ ] T014 [US1] Implement [Service] in src/services/[service].py (MUST use minimal imports, document complexity)
+- [ ] T015 [US1] Implement [endpoint/feature] in src/[location]/[file].py (MUST include input validation)
+- [ ] T016 [US1] Add validation and error handling (MUST not leak sensitive information)
+- [ ] T017 [US1] Add logging for user story 1 operations (MUST be secure and minimal)
+- [ ] T018 [US1] Review imports and remove any non-essential dependencies
+- [ ] T019 [US1] Verify Docker container runs without external dependencies
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -150,12 +154,15 @@ Examples of foundational tasks (adjust based on your project):
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] TXXX [P] Documentation updates in docs/
-- [ ] TXXX Code cleanup and refactoring
-- [ ] TXXX Performance optimization across all stories
+- [ ] TXXX [P] Documentation updates in docs/ (MUST follow Documentation for Maintainability principle)
+- [ ] TXXX Code cleanup and refactoring (MUST follow Simplicity First principle)
+- [ ] TXXX Performance optimization across all stories (MUST ensure no bottlenecks)
 - [ ] TXXX [P] Additional unit tests (if requested) in tests/unit/
-- [ ] TXXX Security hardening
+- [ ] TXXX Security hardening (MUST follow Security by Design principle)
 - [ ] TXXX Run quickstart.md validation
+- [ ] TXXX Constitutional compliance review (verify all principles are followed)
+- [ ] TXXX Docker container optimization (verify minimal infrastructure)
+- [ ] TXXX Import analysis and cleanup (verify essential imports only)
 
 ---
 

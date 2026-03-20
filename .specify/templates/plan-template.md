@@ -31,7 +31,22 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+### Required Compliance Gates
+
+- **Simplicity First**: Solution MUST use the most straightforward approach. Any complexity MUST be justified with measurable benefits.
+- **Minimal Infrastructure**: Design MUST run in minimal Docker containers without external dependencies. No performance bottlenecks acceptable.
+- **Essential Imports Only**: All dependencies MUST be absolutely required. Import analysis MUST be documented.
+- **Security by Design**: Input validation, authentication, and authorization MUST be designed in from the start.
+- **Documentation for Maintainability**: All files and functions MUST have descriptive comments explaining purpose and behavior.
+
+### Complexity Justification Required
+
+If any design decision violates the above principles, provide explicit justification in the table below:
+
+| Violation | Why Needed | Simpler Alternative Rejected Because |
+|-----------|------------|-------------------------------------|
+| [e.g., External database] | [specific requirement] | [why in-memory/file-based insufficient] |
+| [e.g., Complex framework] | [specific problem] | [why simpler solution insufficient] |
 
 ## Project Structure
 
@@ -93,12 +108,3 @@ ios/ or android/
 
 **Structure Decision**: [Document the selected structure and reference the real
 directories captured above]
-
-## Complexity Tracking
-
-> **Fill ONLY if Constitution Check has violations that must be justified**
-
-| Violation | Why Needed | Simpler Alternative Rejected Because |
-|-----------|------------|-------------------------------------|
-| [e.g., 4th project] | [current need] | [why 3 projects insufficient] |
-| [e.g., Repository pattern] | [specific problem] | [why direct DB access insufficient] |
