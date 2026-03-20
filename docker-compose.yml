@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      target: backend
+    ports:
+      - "5001:5001"
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=sqlite:///data/spacer.db
+      - SECRET_KEY=dev-secret-key-change-in-production
+      - VAPID_PRIVATE_KEY=your-vapid-private-key
+      - VAPID_PUBLIC_KEY=your-vapid-public-key
+      - VAPID_SUBJECT=mailto:admin@spacer.local
+    volumes:
+      - ./backend/data:/app/data
+      - ./backend/src:/app/src
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      target: frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:5001
+      - NEXT_PUBLIC_APP_URL=http://localhost:3000
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  backend_data:

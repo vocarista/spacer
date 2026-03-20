@@ -11,6 +11,12 @@ Create a multi-user spaced-repetition system that allows users to create account
 
 ## Technical Context
 
+<!--
+  ACTION REQUIRED: Replace the content in this section with the technical details
+  for the project. The structure here is presented in advisory capacity to guide
+  the iteration process.
+-->
+
 **Language/Version**: Node.js 18+  
 **Primary Dependencies**: Express.js (backend), Next.js (frontend), SQLite (database), Web Push libraries  
 **Storage**: SQLite database  
@@ -57,6 +63,12 @@ specs/001-spaced-repetition-system/
 ```
 
 ### Source Code (repository root)
+<!--
+  ACTION REQUIRED: Replace the placeholder tree below with the concrete layout
+  for this feature. Delete unused options and expand the chosen structure with
+  real paths (e.g., apps/admin, packages/something). The delivered plan must
+  not include Option labels.
+-->
 
 ```text
 backend/
